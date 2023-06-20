@@ -6,4 +6,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
+  # messageテーブルとの関連付け
+  has_many :messages
+  has_many :likes
+  # バリエーション
+  validates :name, presence: true
+  validates :name, length: { maximum: 30 }
+
 end

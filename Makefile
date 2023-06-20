@@ -17,7 +17,7 @@ new:
 	docker-compose build
 	docker-compose run web rails db:create
 	# docker-compose run frontend vue create .
-	# http://localhost:3000 で確認
+	# webはhttp://localhost:3000 で確認
 	# docker-compose run web rails generate controller welcome index
 	# docker-compose run web sh -c 'sleep 20 && rake db:create'
 	sudo chown -R $$USER:$$USER .
