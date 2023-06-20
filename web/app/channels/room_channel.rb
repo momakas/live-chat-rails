@@ -17,3 +17,4 @@ class RoomChannel < ApplicationCable::Channel
     end
   end
 end
+
